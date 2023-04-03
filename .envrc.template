@@ -1,2 +1,2 @@
-export HOST_KEYCLOAK=localhost
-export HOST_BFF=localhost
+export REACT_APP_HOST_KEYCLOAK=localhost
+export REACT_APP_HOST_BFF=localhost
