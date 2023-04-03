@@ -1,8 +1,6 @@
-import { List, Typography } from "antd";
+import { List } from "antd";
 import { ReactElement } from "react";
 import { useDoctorListEffect } from "../presenters/use-doctor-list-efect";
-
-const { Title } = Typography;
 
 export const DoctorListScreen = (): ReactElement => {
 
@@ -10,7 +8,6 @@ export const DoctorListScreen = (): ReactElement => {
 
   return (
     <div>
-      <Title>医生列表</Title>
       <List
         itemLayout="horizontal"
         dataSource={doctorList}
