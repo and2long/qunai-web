@@ -1,9 +1,10 @@
 import { Department } from "./department";
 import { DoctorLevel } from "./doctor-level";
 import { Hospital } from "./hospital";
+import { User } from "./user";
 
 export interface Doctor {
-  userId: string;
+  user: User;
   introduction?: string;
   hospital: Hospital;
   department: Department;

@@ -14,7 +14,7 @@ export const DoctorListScreen = (): ReactElement => {
         renderItem={(item) => (
           <List.Item>
             <List.Item.Meta
-              title={item.userId}
+              title={item.user.username}
               description={item.hospital.name}
             />
           </List.Item>
