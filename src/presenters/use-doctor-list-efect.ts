@@ -10,10 +10,10 @@ export const useDoctorListEffect = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await apiClient.get("api/doctors");
-      setDoctorlist(response.data);
+      setDoctorlist(response.data.data);
     };
     fetchData();
-  });
+  }, []);
 
   return {
     doctorList

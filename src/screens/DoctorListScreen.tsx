@@ -1,6 +1,5 @@
-import { Typography } from "antd";
+import { List, Typography } from "antd";
 import { ReactElement } from "react";
-import { Doctor } from "../interfaces/doctor";
 import { useDoctorListEffect } from "../presenters/use-doctor-list-efect";
 
 const { Title } = Typography;
@@ -11,12 +10,19 @@ export const DoctorListScreen = (): ReactElement => {
 
   return (
     <div>
-      <Title level={2}>医生列表</Title>
-      <ul>
-        {
-          doctorList.map((item: Doctor) => <li key={item.userId}>{item.userId}</li>)
-        }
-      </ul>
+      <Title>医生列表</Title>
+      <List
+        itemLayout="horizontal"
+        dataSource={doctorList}
+        renderItem={(item) => (
+          <List.Item>
+            <List.Item.Meta
+              title={item.userId}
+              description={item.hospital.name}
+            />
+          </List.Item>
+        )}
+      />
     </div>
   );
 };
