@@ -1,12 +1,13 @@
 import { Typography } from "antd";
-import { useFetchDoctorList } from "../presenters/use-fetch-doctor-list";
+import { ReactElement } from "react";
 import { Doctor } from "../interfaces/doctor";
+import { useDoctorListEffect } from "../presenters/use-doctor-list-efect";
 
 const { Title } = Typography;
 
-export const DoctorListScreen = () => {
+export const DoctorListScreen = (): ReactElement => {
 
-  const { doctorList } = useFetchDoctorList();
+  const { doctorList } = useDoctorListEffect();
 
   return (
     <div>

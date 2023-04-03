@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Doctor } from "../interfaces/doctor";
 import { apiClient } from "../http-client/http-client";
+import { Doctor } from "../interfaces/doctor";
 
-export const useFetchDoctorList = () => {
+export const useDoctorListEffect = () => {
 
   const [doctorList, setDoctorlist] = useState<Doctor[]>([]);
 

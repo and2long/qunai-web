@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosError, AxiosInstance } from "axios";
 import { BASE_URL_BFF, BASE_URL_KEYCLOAK } from "../constants/constants";
 
 export const keycloakClient: AxiosInstance = axios.create(
@@ -40,6 +40,6 @@ apiClient.interceptors.response.use(response => {
   console.log("API Response", request.method, request.path, `Status: ${response.status}`);
   return response;
 }, error => {
-  console.log("API Error", error.request.method, error.request.path, `Status: ${error.response.status} ${error.response.statusText}`);
+  console.log("API Error", error);
   return Promise.reject(error);
 });
