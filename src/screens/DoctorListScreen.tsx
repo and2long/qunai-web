@@ -14,8 +14,8 @@ export const DoctorListScreen = (): ReactElement => {
         renderItem={(item) => (
           <List.Item>
             <List.Item.Meta
-              title={item.user.username}
-              description={item.hospital.name}
+              title={item.username}
+              description={[item.hospitalName, item.departmentName, item.levelName].join(", ")}
             />
           </List.Item>
         )}

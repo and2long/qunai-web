@@ -1,12 +1,12 @@
-import { Department } from "./department";
-import { DoctorLevel } from "./doctor-level";
-import { Hospital } from "./hospital";
-import { User } from "./user";
+import { Gender } from "../constants/gender";
 
 export interface Doctor {
-  user: User;
+  userId: string,
+  username: string,
+  gender: Gender,
+  hospitalName: string;
+  departmentName: string;
+  levelName: string;
+  phoneNumber?: string;
   introduction?: string;
-  hospital: Hospital;
-  department: Department;
-  level: DoctorLevel;
 }
