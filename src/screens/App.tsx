@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { DoctorListScreen } from "./DoctorListScreen";
+import { AppointmentListScreen } from "./AppointmentListScreen";
 
 
 const App: React.FC = () => {
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="doctors" element={<DoctorListScreen />} />
+          <Route path="appointments" element={<AppointmentListScreen />} />
         </Routes>
       </BrowserRouter>
     </div>
