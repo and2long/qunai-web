@@ -8,3 +8,9 @@ export interface Appointment {
   participants: User[];
   departments: Department[];
 }
+
+export interface AppointmentCreationPayload {
+  creatorId: string,
+  title: string,
+  introduction: string,
+}
