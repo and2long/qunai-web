@@ -82,7 +82,7 @@ export const CreateAppointmentScreen = (): ReactElement => {
             allowClear
           >
             {
-              departments.map((item: Department) => <Option value={item.id}>{item.name}</Option>)
+              departments.map((item: Department) => <Option key={item.id} value={item.id}>{item.name}</Option>)
             }
           </Select>
         </Form.Item>
