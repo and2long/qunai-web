@@ -1,12 +1,14 @@
-import { Department } from "./department";
 import { User } from "./user";
 
 export interface Appointment {
   creator: User;
   title: string;
+  startTime: string;
+  endTime: string;
+  createdAt: string;
   introduction: string;
   participants: User[];
-  departments: Department[];
+  departmentNames: string[];
 }
 
 export interface AppointmentCreationPayload {
