@@ -16,6 +16,7 @@ const App: React.FC = () => {
       </ul>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<DoctorListScreen />} />
           <Route path="/doctors" element={<DoctorListScreen />} />
           <Route path="/appointments" element={<AppointmentListScreen />} />
           <Route path="/appointments/create" element={<CreateAppointmentScreen />} />
